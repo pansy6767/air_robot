@@ -384,7 +384,7 @@ void AbbRobot::abbWrite(trajectory_msgs::JointTrajectoryPoint point)
     clamp(&abbManipulator_.jointList[2].pos_des, 0.0, 2.0);//第三个关节
     clamp(&abbManipulator_.jointList[3].pos_des, -3.0, 3.0);//第四个关节
     clamp(&abbManipulator_.jointList[4].pos_des, -1.28, 1.28);//第五个关节
-    //clamp(&abbManipulator_.jointList[5].pos_des, 0.0, 0.0);//第五个关节
+    clamp(&abbManipulator_.jointList[5].pos_des, 0.0, 1.1);//第五个关节
     for (int i = 0; i < joint_count; ++i)
     {
         abbManipulator_.jointList[i].pos_des = abbManipulator_.jointList[i].pos_des * directionMotor_[i]; 

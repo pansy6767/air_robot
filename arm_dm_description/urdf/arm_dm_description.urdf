@@ -197,8 +197,10 @@
         <parent link="link5" />
         <child link="link6" />
         <axis xyz="0 -1 0" />
-        <limit lower="-1.57" upper="1.57" effort="26" velocity="10" />
+        <limit lower="0" upper="1.1" effort="26" velocity="10" />
     </joint>
+
+    
     <transmission name="trans_joint1">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="joint1">

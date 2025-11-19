@@ -124,7 +124,7 @@ private:
 	std::atomic<bool> pub_flag ;
 	std_msgs::Float64MultiArray ctrl_pos_msg, ctrl_vel_msg, ctrl_acc_msg;
 
-	std::vector<int> directionMotor_{ 1, -1, 1, -1, -1, -1};//65432
+	std::vector<int> directionMotor_{ 1, -1, 1, -1, -1, 1};//65432
 };
 
 #endif // ABBROBOT_H
