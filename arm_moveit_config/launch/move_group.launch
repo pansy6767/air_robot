@@ -102,4 +102,12 @@
     <param name="planning_scene_monitor/publish_transforms_updates" value="$(arg publish_monitored_planning_scene)" />
   </node>
 
+  <!-- 包含数据库仓库配置 -->
+  <include file="$(find arm_moveit_config)/launch/warehouse_settings.launch.xml">
+  <!-- 可覆盖默认参数（如数据库端口） -->
+  <arg name="moveit_warehouse_port" value="33829" />  <!-- 与database.yaml中的port对应 -->
+  <arg name="moveit_warehouse_host" value="localhost" />  <!-- 与database.yaml中的host对应 -->
+  </include>
+
+
 </launch>
